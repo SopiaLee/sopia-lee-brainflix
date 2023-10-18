@@ -1,0 +1,31 @@
+@use './styles/partials/variables' as *; 
+@use './styles/partials/mixins' as *;
+@use "./styles/partials/font" as *;
+
+.App {
+font-family: "Avenir Next", "Sans-serif";
+}
+
+.siteheader__logo{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-header{
+  &__logo {
+    width: 100px;
+  }
+
+  &__searchicon {
+    width: 50px;
+    height: 50px;
+    color: red;
+  }
+  &__searchbar {
+    width: 150px;
+    border: none;
+  }
+}
+
+
+
