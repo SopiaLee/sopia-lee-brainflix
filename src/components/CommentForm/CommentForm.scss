@@ -1,0 +1,24 @@
+@use '../../styles/partials/variables' as *; 
+@use '../../styles/partials/mixins' as *;
+
+.commentsform {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+&__profilepic{
+    display: flex;
+    background-image: url(../../assets/images/Mohan-muruge.jpg);
+    background-color: #E1E1E1;
+    border-radius: 50%;
+    max-width: 36px;
+    max-height: 36px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    margin-top: 45px;
+    margin-right: 16px;
+
+}
+
+}

@@ -1,21 +1,17 @@
 import "./Comments.scss";
 
 function Comments(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
-    <li className="commentList">
-      <div className="commentList__profilepic"></div>
-      <div className="commentList__text">
-        <div className="commentList__texttop">
-          <div className="comment__name">{props.comment.comments[0].name}</div>
-          <div className="comment__date">
-            {props.comment.comments[0].timestamp}
-          </div>
+    <li className="comments__commentList">
+      <div className="comments__profilepic"></div>
+      <div className="comments__text">
+        <div className="comments__top">
+          <div className="comments__name">{props.comment.name}</div>
+          <div className="comments__date">{props.comment.timestamp}</div>
         </div>
-        <div className="comment__content">
-          {props.comment.comments[0].comment}
-        </div>
+        <div className="comments__content">{props.comment.comment}</div>
       </div>
     </li>
   );

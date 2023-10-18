@@ -27,5 +27,18 @@ font-family: "Avenir Next", "Sans-serif";
   }
 }
 
+.mainvideo__toptext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mainvideo__bottomtext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mainvideo__video {
+  width: 100vw;
+}
 
 
