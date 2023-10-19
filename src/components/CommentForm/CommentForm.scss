@@ -4,7 +4,6 @@
 .commentsform {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
 &__profilepic{
     display: flex;
@@ -19,6 +18,11 @@
     margin-top: 45px;
     margin-right: 16px;
 
+}
+&__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 }

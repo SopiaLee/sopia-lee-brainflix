@@ -3,6 +3,8 @@ import searchIcon from './assets/icons/search.svg';
 import MainVideo from './components/MainVideo/MainVideo';
 import CommentForm from './components/CommentForm/CommentForm'
 
+import { useState } from 'react';
+
 
 import "./App.scss";
 
@@ -13,8 +15,15 @@ import CommentList from './components/CommentList/CommentList';
 
 function App() {
 
-  let selectedVideo = videosData[0];
-  console.log(selectedVideo);
+  //setting default for the selected video
+  const [selectedVideo, setSelectedVideo] = useState(videosData[0]);
+
+  //video clickHandler function
+  function clickHandler(video) {
+    return (
+      setSelectedVideo(video)
+    )
+  } 
 
   return (
     <div className="App">
@@ -27,24 +36,32 @@ function App() {
       <button className='siteheader__btn'>Upload</button>
       </header>
 
-      <MainVideo/>
+        {/* using props */}
+        <MainVideo selectedVideo={selectedVideo}/>
       
       <section className='comments'>
         <h4 className='comments__number'>{selectedVideo.comments.length} Comments</h4>
+          <CommentForm/>
 
-      <section className='comments__form'>
-        <CommentForm/>
+        {/* using props */}  
+          <CommentList comments ={selectedVideo.comments}/>
       </section>
 
-
-      <CommentList comments ={selectedVideo.comments}/>
-      {/* <ul>
-        {commentsData.map((comment)=> {
-          return <li key={comment.id}>{comment.name}{comment.timestamp}{comment.comment}</li>
-        }
-        )}
-      </ul> */}
-      </section>
+        {/*Next video components*/}
+        <section className='nextvideo'>
+        <div className='nextvideo__header'>NEXT VIDEOS</div>
+        <ul className='nextvideo__ul'>
+          {videosData.filter((video) => video.id !== selectedVideo.id).map((video)=> {
+            return <li key={video.id} onClick={() => clickHandler(video)} className='nextvideo__list'>
+              <video className='video__image' poster={video.image}></video>
+              <div className='nextvideo__text'>
+                <div className='nextvideo__title'>{video.title}</div>
+                <div className='nextvideo__channel'>{video.channel}</div>
+              </div>
+              </li>
+          })}
+        </ul>
+        </section>
     </div>
   );
 }
