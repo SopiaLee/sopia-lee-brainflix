@@ -1,3 +1,83 @@
 @use '../../styles/partials/variables' as *; 
 @use '../../styles/partials/mixins' as *;
 
+
+.mainvideo {
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;   
+        margin-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    &__lefttext {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 13px;
+        line-height: 18px;
+        color: #AFAFAF;
+      }
+    &__creator {
+       font-weight: 600;
+       color: #323232;
+       padding-right: 80px;
+    }
+    &__viewgroup {
+        font-weight: 400;
+        color: #AFAFAF;
+        display: flex;
+    }
+    &__viewicon {
+        padding-right: 10px;
+    }
+
+    &__righttext {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    &__date {
+        font-weight: 400;  
+        color: #AFAFAF;  
+        padding-right: 80px;
+        margin-top: 0;
+    }
+    &__likesgroup {
+        font-weight: 400;
+        color: #AFAFAF;
+        display: flex;
+        margin-top: 0;
+    }
+    &__likeicon {
+        padding-right: 10px;
+    }
+
+    &__video {
+        width: 100vw; 
+        margin-top: 24px;
+        object-fit: cover;
+        max-height: 30vh;
+    }
+    &__description {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 16px;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+}
+
+

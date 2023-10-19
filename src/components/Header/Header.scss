@@ -1,2 +1,90 @@
 @use '../../styles/partials/variables' as *; 
 @use '../../styles/partials/mixins' as *;
+
+
+
+.siteheader{
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &__logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: 25px;
+      max-width: 120px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+    &__search {
+        border: 1px solid #E1E1E1;
+        width: 100%;
+        margin-right: 16px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 4px;
+        background-color: #FAFAFA;
+    }
+    &__searchinput {
+        border: none;
+        margin-left: 16px;
+        background-color: #FAFAFA;
+        width: 100%;
+        font-family: "Avenir Next", "Sans-serif";
+    }
+    ::placeholder {
+        color: #000000;
+    }
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__searchicon {
+        width: 20px;
+        height: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 16px;
+    }
+    &__searchbar {
+      width: 150px;
+      border: none;
+    }
+    &__profilepic{
+        display: flex;
+        border-radius: 50%;
+        max-width: 36px;
+        max-height: 36px;
+        width: 100%;
+        height: 36px;
+        background-image: url(../../assets/images/Mohan-muruge.jpg);
+        background-position: center;
+        background-size: cover;
+        background-color: #E1E1E1;
+    }
+    &__btn {
+        background-color: #0095FF;
+        color: #FFFFFF;
+        height: 40px;
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 600;
+        
+    }
+    &__uploadicon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        padding-right: 80%;
+    }
+  }
+  

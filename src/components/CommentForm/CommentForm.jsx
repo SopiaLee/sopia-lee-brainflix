@@ -13,7 +13,11 @@ function CommentForm() {
           name="commentInput"
         ></input>
         <button className="commentsform__button">
-          <img src={commentIcon} alt="add comment icon" />
+          <img
+            src={commentIcon}
+            alt="add comment icon"
+            className="commentsform__icon"
+          />
           COMMENT
         </button>
       </div>
