@@ -1,16 +1,11 @@
 import MainVideo from './components/MainVideo/MainVideo';
 import CommentForm from './components/CommentForm/CommentForm'
-
-import { useState } from 'react';
-
-
-import "./App.scss";
-
 import videosData from "./data/video-details.json";
-
-// import commentsData from "./data/video-details.json";
 import CommentList from './components/CommentList/CommentList';
 import Header from './components/Header/Header';
+
+import { useState } from 'react';
+import "./App.scss";
 
 function App() {
 
@@ -46,7 +41,7 @@ function App() {
         <ul className='nextvideo__ul'>
           {videosData.filter((video) => video.id !== selectedVideo.id).map((video)=> {
             return <li key={video.id} onClick={() => clickHandler(video)} className='nextvideo__list'>
-              <video className='video__image' poster={video.image}></video>
+              <video className='nextvideo__image' poster={video.image}></video>
               <div className='nextvideo__text'>
                 <div className='nextvideo__title'>{video.title}</div>
                 <div className='nextvideo__channel'>{video.channel}</div>

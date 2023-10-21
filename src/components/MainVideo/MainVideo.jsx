@@ -4,7 +4,7 @@ import likeicon from "../../assets/icons/likes.svg";
 import "./MainVideo.scss";
 
 function MainVideo(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
     <>
@@ -21,7 +21,9 @@ function MainVideo(props) {
             <h4 className="mainvideo__creator">
               By {props.selectedVideo.channel}
             </h4>
-            <h4 className="mainvideo__date">{props.selectedVideo.timestamp}</h4>
+            <h4 className="mainvideo__date">
+              {new Date(props.selectedVideo.timestamp).toLocaleDateString()}
+            </h4>
           </div>
 
           <div className="mainvideo__righttext">

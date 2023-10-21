@@ -10,6 +10,11 @@
         margin-top: 16px;
         padding-left: 16px;
         padding-right: 16px;
+
+        @include tablet {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
     }
     &__text {
         display: flex;
@@ -18,6 +23,16 @@
         border-bottom: 1px solid #E1E1E1;
         margin-left: 16px;
         margin-right: 16px;
+
+        @include tablet {
+            padding-bottom: 10px;
+            border-top: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 24px;
+            margin-right: 24px;
+        }
     }
     &__lefttext {
         display: flex;
@@ -26,16 +41,34 @@
         font-size: 13px;
         line-height: 18px;
         color: #AFAFAF;
+        
+        @include tablet{
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+
+        }
       }
     &__creator {
        font-weight: 600;
        color: #323232;
        padding-right: 80px;
+
+       @include tablet {
+        margin: 0;
+        padding-right: 24px;
+       }
     }
     &__viewgroup {
         font-weight: 400;
         color: #AFAFAF;
         display: flex;
+
+        @include tablet {
+            margin: 0;
+            padding-right: 16px;
+
+        }
     }
     &__viewicon {
         padding-right: 10px;
@@ -47,18 +80,30 @@
         justify-content: flex-start;
         font-size: 13px;
         line-height: 18px;
+
+        @include tablet{
+            flex-direction: row;
+        }
     }
     &__date {
         font-weight: 400;  
         color: #AFAFAF;  
         padding-right: 80px;
         margin-top: 0;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
     &__likesgroup {
         font-weight: 400;
         color: #AFAFAF;
         display: flex;
         margin-top: 0;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
     &__likeicon {
         padding-right: 10px;
@@ -69,6 +114,10 @@
         margin-top: 24px;
         object-fit: cover;
         max-height: 30vh;
+        
+        @include tablet {
+            margin-top: 0;
+        }
     }
     &__description {
         padding-left: 16px;
@@ -77,6 +126,11 @@
         font-size: 13px;
         line-height: 18px;
         font-weight: 400;
+
+        @include tablet {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
     }
 }
 

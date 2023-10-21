@@ -9,7 +9,9 @@ function Comments(props) {
       <div className="comments__text">
         <div className="comments__top">
           <div className="comments__name">{props.comment.name}</div>
-          <div className="comments__date">{props.comment.timestamp}</div>
+          <div className="comments__date">
+            {new Date(props.comment.timestamp).toLocaleDateString()}
+          </div>
         </div>
         <div className="comments__content">{props.comment.comment}</div>
       </div>

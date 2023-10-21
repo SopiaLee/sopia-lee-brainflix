@@ -16,11 +16,16 @@ font-family: "Avenir Next", "Sans-serif";
 .comments__ul {
   border-bottom: 1px solid #E1E1E1;
 }
-.video__image {
-  width: 150px;
-}
 
 .nextvideo {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include tablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
 &__ul {
   list-style: none;
   padding: 0;
@@ -28,5 +33,37 @@ font-family: "Avenir Next", "Sans-serif";
 &__list {
   display: flex;
   flex-direction: row;
+  padding-bottom: 16px;
+}
+&__header {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #AFAFAF;
+}
+&__image {
+  min-width: 100px;
+  max-width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: #E1E1E1;
+  margin-right: 16px;
+}
+&__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+&__title {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+}
+&__channel {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
 }
 }
