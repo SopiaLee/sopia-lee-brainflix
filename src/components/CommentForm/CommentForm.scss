@@ -21,6 +21,15 @@
     padding-bottom: 60px;
     font-family: "Avenir Next", "Sans-serif";
     border-radius: 4px;
+    width: 95%;
+
+    @include tablet {
+        height: 40px;
+        padding-bottom: 0;
+        padding-top: 0;
+        width: 100%;
+
+    }
 }
 ::placeholder {
     color: #000000;
@@ -58,6 +67,17 @@
     font-size: 13px;
     line-height: 20px;
     font-weight: 600;
+    width: 100%;
+
+    @include tablet {
+        width: 30vw;
+        margin-top: 0;
+        margin-left: 24px;
+    }
+    @include desktop {
+        margin-right: 24px;
+        width: 18vw
+    }
 }
 
 &__icon {
@@ -65,5 +85,20 @@
     padding-right: 60%;
     width: 20px;
     height: 20px;
+
+    @include tablet {
+        padding-right: 15%;
+    }
+    @include desktop {
+        padding-right: 9%;
+    }
+}
+
+&__tablettop{
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 }

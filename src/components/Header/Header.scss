@@ -4,16 +4,39 @@
 
 
 .siteheader{
+
+&__mobile {
     padding-left: 16px;
     padding-right: 16px;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+&__tablet {
+    display: none;
 
     @include tablet {
         display: flex;
         flex-direction: row;
         margin-top: 16px;
         margin-bottom: 16px;
+        justify-content: space-between;
+        padding-left: 24px;
+        padding-right: 24px;
     }
+    @include desktop {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
 
+&__tabletright {
+    display: flex;
+    flex-direction: row;
+    
+}
     &__logo {
       display: block;
       margin-left: auto;
@@ -25,13 +48,9 @@
 
       @include tablet {
         margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
       }
-    }
-    &__tabletright {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-
     }
     &__search {
         border: 1px solid #E1E1E1;
@@ -42,6 +61,14 @@
         flex-direction: row;
         border-radius: 4px;
         background-color: #FAFAFA;
+
+        @include tablet {
+            width: 30vw;
+            margin-right: 24px;
+        }
+        @include desktop {
+            width: 20vw;
+        }
     }
     &__searchinput {
         border: none;
@@ -116,9 +143,12 @@
         font-weight: 600;
 
         @include tablet {
-            width: 150px;
+            width: 25vw;
             margin-top: 0;
-            
+            margin-right: 24px;
+        }
+        @include desktop {
+            width: 15vw;
         }
         
     }
@@ -130,6 +160,9 @@
 
         @include tablet{
             padding-right: 15%;
+        }
+        @include desktop {
+            padding-right: 9%;
         }
     }
   }

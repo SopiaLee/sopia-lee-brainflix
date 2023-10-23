@@ -9,6 +9,9 @@
         padding-left: 24px;
         padding-right: 24px;
     }
+    @include desktop {
+        padding-right: 0;
+    }
 
 &__profilepic {
     display: flex;
@@ -28,11 +31,20 @@
     border-top: 1px solid #E1E1E1;
     padding-top: 16px;
     padding-bottom: 16px;
+
+    @include desktop{
+        padding-right: 24px;
+    }
 }
 &__text {
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 &__top {
     display: flex;

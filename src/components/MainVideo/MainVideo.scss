@@ -2,7 +2,7 @@
 @use '../../styles/partials/mixins' as *;
 
 
-.mainvideo {
+.mainvideotext {
     &__title {
         font-size: 24px;
         line-height: 32px;
@@ -14,6 +14,13 @@
         @include tablet {
             padding-left: 24px;
             padding-right: 24px;
+            font-size: 33px;
+            line-height: 44px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        @include desktop {
+            margin-top: 36px;
         }
     }
     &__text {
@@ -33,6 +40,9 @@
             margin-left: 24px;
             margin-right: 24px;
         }
+        @include desktop {
+            border: none;
+        }
     }
     &__lefttext {
         display: flex;
@@ -46,6 +56,8 @@
             flex-direction: row;
             justify-content:center;
             align-items: center;
+            font-size: 14px;
+            line-height: 22px;
 
         }
       }
@@ -57,6 +69,7 @@
        @include tablet {
         margin: 0;
         padding-right: 24px;
+        font-weight: 700;
        }
     }
     &__viewgroup {
@@ -83,6 +96,8 @@
 
         @include tablet{
             flex-direction: row;
+            font-size: 14px;
+            line-height: 22px;
         }
     }
     &__date {
@@ -109,16 +124,17 @@
         padding-right: 10px;
     }
 
-    &__video {
-        width: 100vw; 
-        margin-top: 24px;
-        object-fit: cover;
-        max-height: 30vh;
+    // &__video {
+    //     width: 100vw; 
+    //     margin-top: 24px;
+    //     object-fit: cover;
+    //     max-height: 30vh;
         
-        @include tablet {
-            margin-top: 0;
-        }
-    }
+    //     @include tablet {
+    //         margin-top: 0;
+    //         max-height: 40vh;
+    //     }
+    // }
     &__description {
         padding-left: 16px;
         padding-right: 16px;
@@ -130,6 +146,12 @@
         @include tablet {
             padding-left: 24px;
             padding-right: 24px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        @include desktop {
+            border-top: 1px solid #E1E1E1;
+            padding-top: 24px;
         }
     }
 }

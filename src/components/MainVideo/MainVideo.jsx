@@ -8,44 +8,44 @@ function MainVideo(props) {
 
   return (
     <>
-      <section className="mainvideo">
-        <video
+      <section className="mainvideotext">
+        {/* <video
           className="mainvideo__video"
           poster={props.selectedVideo.image}
           controls="controls"
-        ></video>
-        <h1 className="mainvideo__title">{props.selectedVideo.title}</h1>
+        ></video> */}
+        <h1 className="mainvideotext__title">{props.selectedVideo.title}</h1>
 
-        <div className="mainvideo__text">
-          <div className="mainvideo__lefttext">
-            <h4 className="mainvideo__creator">
+        <div className="mainvideotext__text">
+          <div className="mainvideotext__lefttext">
+            <h4 className="mainvideotext__creator">
               By {props.selectedVideo.channel}
             </h4>
-            <h4 className="mainvideo__date">
+            <h4 className="mainvideotext__date">
               {new Date(props.selectedVideo.timestamp).toLocaleDateString()}
             </h4>
           </div>
 
-          <div className="mainvideo__righttext">
-            <h4 className="mainvideo__viewgroup">
+          <div className="mainvideotext__righttext">
+            <h4 className="mainvideotext__viewgroup">
               <img
                 src={viewicon}
                 alt="video views icon"
-                className="mainvideo__viewicon"
+                className="mainvideotext__viewicon"
               />
               {props.selectedVideo.views}
             </h4>
-            <h4 className="mainvideo__likesgroup">
+            <h4 className="mainvideotext__likesgroup">
               <img
                 src={likeicon}
                 alt="video likes icon"
-                className="mainvideo__likeicon"
+                className="mainvideotext__likeicon"
               />
               {props.selectedVideo.likes}
             </h4>
           </div>
         </div>
-        <p className="mainvideo__description">
+        <p className="mainvideotext__description">
           {props.selectedVideo.description}
         </p>
       </section>
