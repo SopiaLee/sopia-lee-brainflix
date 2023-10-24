@@ -1,0 +1,102 @@
+@use '../../styles/partials/variables' as *; 
+@use '../../styles//partials/mixins' as *;
+@use "../../styles/partials/font" as *;
+
+.uploadpage {
+    margin-left: 16px;
+    margin-right: 16px;
+
+&__header {
+    font-weight: 600;
+    margin-top: 24px;
+}
+&__title {
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #AFAFAF;
+}
+&__img {
+    background-image: url("../../assets/images/mydog.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 150px;
+    border-radius: 4px;
+}
+&__form {
+    margin-right: 16px;
+}
+&__formtitle {
+    margin-top: 16px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #AFAFAF;
+}
+&__formdes {
+    margin-top: 16px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #AFAFAF;
+}
+&__titleinput {
+    border: 1px solid #E1E1E1;
+    background-color: #FAFAFA;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+    font-family: "Avenir Next", "Sans-serif";
+    border-radius: 4px;
+    width: 100%;
+}
+&__desinput {
+    border: 1px solid #E1E1E1;
+    background-color: #FAFAFA;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+    font-family: "Avenir Next", "Sans-serif";
+    border-radius: 4px;
+    width: 100%;
+}
+::placeholder {
+    color: #323232;
+}
+&__publishbtn {
+    background-color: #0095FF;
+    color: #FFFFFF;
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+}
+&__cancelbtn{
+    background-color: #FFFFFF;
+    color: #0095FF; 
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+}
+}
