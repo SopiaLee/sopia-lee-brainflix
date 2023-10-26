@@ -27,7 +27,7 @@ function Header() {
           </div>
           <div className="siteheader__profilepic"></div>
         </div>
-        <Link to="/upload">
+        <Link to="/upload" className="siteheader__uploadlink">
           <button className="siteheader__btn">
             <img
               src={uploadIcon}
@@ -60,7 +60,7 @@ function Header() {
             </div>
             <div className="siteheader__profilepic"></div>
           </div>
-          <Link to="/upload">
+          <Link to="/upload" className="siteheader__uploadlink">
             <button className="siteheader__btn">
               <img
                 src={uploadIcon}

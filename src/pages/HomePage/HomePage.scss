@@ -69,13 +69,18 @@
     padding-right: 100px;
   }
 
+&__link {
+  text-decoration: none;
+  color: #323232;
+  display: flex;
+  flex-direction: row;
+}
+
 &__ul {
   list-style: none;
   padding: 0;
 }
 &__list {
-  display: flex;
-  flex-direction: row;
   padding-bottom: 16px;
 }
 &__header {
@@ -124,6 +129,9 @@
   @include tablet {
     font-size: 14px;
     line-height: 22px;
+  }
+  @include desktop {
+    width: 150px
   }
 }
 &__channel {

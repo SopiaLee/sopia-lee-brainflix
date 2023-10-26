@@ -5,6 +5,10 @@
 
 .siteheader{
 
+&__uploadlink {
+    text-decoration: none;
+}
+
 &__mobile {
     padding-left: 16px;
     padding-right: 16px;
