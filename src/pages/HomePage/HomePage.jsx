@@ -56,7 +56,7 @@ function HomePage() {
           <MainVideo selectedVideo={selectedVideo} />
           <section className="comments">
             <h4 className="comments__number">
-              {/* {selectedVideo.comments.length} Comments */}
+              {selectedVideo.comments?.length} Comments
             </h4>
             <CommentForm />
 
