@@ -7,6 +7,7 @@
 
 &__uploadlink {
     text-decoration: none;
+    color: white;
 }
 
 &__mobile {
@@ -24,11 +25,11 @@
     @include tablet {
         display: flex;
         flex-direction: row;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        margin-top: 24px;
         justify-content: space-between;
         padding-left: 24px;
         padding-right: 24px;
+        margin-bottom: 24px;
     }
     @include desktop {
         padding-left: 100px;
@@ -170,5 +171,12 @@
             padding-right: 9%;
         }
     }
+    &__btngroup {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
   }
   

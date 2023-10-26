@@ -32,6 +32,10 @@
     padding-top: 16px;
     padding-bottom: 16px;
 
+    @include tablet {
+        justify-content: flex-start;
+    }
+
     @include desktop{
         padding-right: 24px;
     }

@@ -60,16 +60,20 @@ function Header() {
             </div>
             <div className="siteheader__profilepic"></div>
           </div>
-          <Link to="/upload" className="siteheader__uploadlink">
-            <button className="siteheader__btn">
-              <img
-                src={uploadIcon}
-                alt="upload icon"
-                className="siteheader__uploadicon"
-              />
-              <h4>UPLOAD</h4>
-            </button>
-          </Link>
+
+          <button className="siteheader__btn">
+            <Link to="/upload" className="siteheader__uploadlink">
+              <div className="siteheader__btngroup">
+                <img
+                  src={uploadIcon}
+                  alt="upload icon"
+                  className="siteheader__uploadicon"
+                />
+                <h4>UPLOAD</h4>
+              </div>
+            </Link>
+          </button>
+
           <div className="siteheader__profilepictablet"></div>
         </div>
       </div>
