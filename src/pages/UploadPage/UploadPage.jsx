@@ -1,7 +1,15 @@
 import "./UploadPage.scss";
 import publishIcon from "../../assets/icons/publish.svg";
+import { useNavigate } from "react-router-dom";
 
 function UploadPage() {
+  let navigate = useNavigate();
+
+  function handlePublishButton() {
+    alert("Video Uploaded :)");
+    navigate("/");
+  }
+
   return (
     <>
       <div className="bordertop"></div>
@@ -26,7 +34,10 @@ function UploadPage() {
           </form>
         </div>
         <div className="uploadpage__buttongroup">
-          <button className="uploadpage__publishbtn">
+          <button
+            className="uploadpage__publishbtn"
+            onClick={handlePublishButton}
+          >
             <img
               src={publishIcon}
               alt="uploadpage publishicon"
