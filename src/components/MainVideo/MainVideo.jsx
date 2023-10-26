@@ -1,6 +1,8 @@
 import viewicon from "../../assets/icons/views.svg";
 import likeicon from "../../assets/icons/likes.svg";
 
+import videosData from "../../data/video-details.json";
+
 import "./MainVideo.scss";
 
 function MainVideo(props) {
@@ -9,13 +11,7 @@ function MainVideo(props) {
   return (
     <>
       <section className="mainvideotext">
-        {/* <video
-          className="mainvideo__video"
-          poster={props.selectedVideo.image}
-          controls="controls"
-        ></video> */}
         <h1 className="mainvideotext__title">{props.selectedVideo.title}</h1>
-
         <div className="mainvideotext__text">
           <div className="mainvideotext__lefttext">
             <h4 className="mainvideotext__creator">

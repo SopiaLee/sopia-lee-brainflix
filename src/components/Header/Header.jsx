@@ -1,4 +1,5 @@
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo/BrainFlix-logo.svg";
 import searchIcon from "../../assets/icons/search.svg";
@@ -8,7 +9,9 @@ function Header() {
   return (
     <header className="siteheader">
       <div className="siteheader__mobile">
-        <img src={logo} alt="BrainFlix logo" className="siteheader__logo" />
+        <Link to="/">
+          <img src={logo} alt="BrainFlix logo" className="siteheader__logo" />
+        </Link>
         <div className="siteheader__top">
           <div className="siteheader__search">
             <img
@@ -24,19 +27,23 @@ function Header() {
           </div>
           <div className="siteheader__profilepic"></div>
         </div>
-        <button className="siteheader__btn">
-          <img
-            src={uploadIcon}
-            alt="upload icon"
-            className="siteheader__uploadicon"
-          />
-          <h4>UPLOAD</h4>
-        </button>
+        <Link to="/upload">
+          <button className="siteheader__btn">
+            <img
+              src={uploadIcon}
+              alt="upload icon"
+              className="siteheader__uploadicon"
+            />
+            <h4>UPLOAD</h4>
+          </button>
+        </Link>
         <div className="siteheader__profilepictablet"></div>
       </div>
 
       <div className="siteheader__tablet">
-        <img src={logo} alt="BrainFlix logo" className="siteheader__logo" />
+        <Link to="/">
+          <img src={logo} alt="BrainFlix logo" className="siteheader__logo" />
+        </Link>
         <div className="siteheader__tabletright">
           <div className="siteheader__top">
             <div className="siteheader__search">
@@ -53,14 +60,16 @@ function Header() {
             </div>
             <div className="siteheader__profilepic"></div>
           </div>
-          <button className="siteheader__btn">
-            <img
-              src={uploadIcon}
-              alt="upload icon"
-              className="siteheader__uploadicon"
-            />
-            <h4>UPLOAD</h4>
-          </button>
+          <Link to="/upload">
+            <button className="siteheader__btn">
+              <img
+                src={uploadIcon}
+                alt="upload icon"
+                className="siteheader__uploadicon"
+              />
+              <h4>UPLOAD</h4>
+            </button>
+          </Link>
           <div className="siteheader__profilepictablet"></div>
         </div>
       </div>
