@@ -18,9 +18,9 @@ function HomePage() {
 
   useEffect(() => {
     const getVideos = async () => {
-      const response = await axios.get(
-        `https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`
-      );
+      const response =
+        await axios.get // `https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`
+        `http://localhost:8080/videos`;
       setVideos(response.data);
     };
     getVideos();
@@ -35,7 +35,8 @@ function HomePage() {
 
     const getSelectedVideo = async () => {
       const response = await axios.get(
-        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
+        // `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
+        `http://localhost:8080/videos/${videoId}`
       );
       setSelectedVideo(response.data);
     };
