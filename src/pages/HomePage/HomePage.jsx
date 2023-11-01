@@ -18,9 +18,7 @@ function HomePage() {
 
   useEffect(() => {
     const getVideos = async () => {
-      const response =
-        await axios.get // `https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`
-        `http://localhost:8080/videos`;
+      const response = await axios.get`http://localhost:8080/videos`;
       setVideos(response.data);
     };
     getVideos();
@@ -30,12 +28,10 @@ function HomePage() {
     let videoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
     if (params.id) {
       videoId = params.id;
-      // console.log(params.id);
     }
 
     const getSelectedVideo = async () => {
       const response = await axios.get(
-        // `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
         `http://localhost:8080/videos/${videoId}`
       );
       setSelectedVideo(response.data);
