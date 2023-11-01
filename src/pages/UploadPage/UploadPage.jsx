@@ -60,20 +60,6 @@ function UploadPage() {
           </form>
           <button className="uploadpage__cancelbtn">CANCEL</button>
         </div>
-        {/* <div className="uploadpage__buttongroup">
-          <button
-            className="uploadpage__publishbtn"
-            onClick={handlePublishButton}
-          >
-            <img
-              src={publishIcon}
-              alt="uploadpage publishicon"
-              className="uploadpage__publishicon"
-            ></img>{" "}
-            PUBLISH
-          </button>
-          <button className="uploadpage__cancelbtn">CANCEL</button>
-        </div> */}
       </div>
     </>
   );
