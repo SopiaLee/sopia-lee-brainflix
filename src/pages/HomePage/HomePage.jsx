@@ -76,10 +76,11 @@ function HomePage() {
                 return (
                   <li key={video.id} className="nextvideo__list">
                     <Link to={`/${video.id}`} className="nextvideo__link">
-                      <video
+                      <img
                         className="nextvideo__image"
-                        poster={video.image}
-                      ></video>
+                        src={video.image}
+                        alt="next video image"
+                      />
                       <div className="nextvideo__text">
                         <div className="nextvideo__title">{video.title}</div>
                         <div className="nextvideo__channel">

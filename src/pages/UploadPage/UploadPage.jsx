@@ -56,9 +56,9 @@ function UploadPage() {
                 ></img>{" "}
                 PUBLISH
               </button>
+              <div className="uploadpage__cancelbtn">CANCEL</div>
             </div>
           </form>
-          <button className="uploadpage__cancelbtn">CANCEL</button>
         </div>
       </div>
     </>
