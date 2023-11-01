@@ -7,10 +7,9 @@ function UploadPage() {
   let navigate = useNavigate();
 
   function handlePublishButton(event) {
-    console.log(event.target.videoTitle.value);
     event.preventDefault();
 
-    const response = axios.post("http://localhost:8080/videos", {
+    const response = axios.post(`${process.env.REACT_APP_API_URL}/videos`, {
       title: event.target.videoTitle.value,
       description: event.target.videoDescription.value,
     });
